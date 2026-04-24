@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-text);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: #fffcf2;
+  flex-direction: column;
+}
+
+body:has(.login_wrapper) {
+  position: fixed;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+::selection {
+  background-color: var(--primary-orange);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: var(--primary-orange);
+  color: #ffffff;
+}
